@@ -1,0 +1,75 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>no.lau</groupId>
+        <artifactId>serv-o-root</artifactId>
+        <version>0.1-SNAPSHOT</version>
+    </parent>
+
+    <artifactId>serv-o-webstart-distribution</artifactId>
+    <packaging>jar</packaging>
+    <name>Serv-o Webstart Distribution</name>
+
+    <organization>
+        <name>no.lau</name>
+        <url>http://stig.lau.no</url>
+    </organization>
+    <url>http://idi.ntnu.no/~hella/vdvil</url>
+
+    <dependencies>
+        <dependency>
+            <groupId>no.lau</groupId>
+            <artifactId>serv-o-web</artifactId>
+            <version>${project.version}</version>
+        </dependency>
+    </dependencies>
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.codehaus.mojo.webstart</groupId>
+                <artifactId>webstart-maven-plugin</artifactId>
+                <version>1.0-beta-1</version>
+                <executions>
+                    <execution>
+                        <phase>install</phase>
+                        <goals>
+                            <goal>jnlp</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <jnlp>
+                        <mainClass>no.lau.vdvil.player.PlayGUI</mainClass>
+                    </jnlp>
+                    <sign>
+                        <keystore>/tmp/myappkeystore</keystore>
+                        <keypass>m2m2m2</keypass>
+                        <storepass>m2m2m2</storepass>
+                        <alias>foobar</alias>
+                        <validity>3650</validity>
+
+                        <dnameCn>no.lau</dnameCn>
+                        <dnameOu>serv-o</dnameOu>
+                        <dnameO>lau</dnameO>
+                        <dnameL>Oslo</dnameL>
+                        <dnameSt>Oslo</dnameSt>
+                        <dnameC>NO</dnameC>
+                        <verify>false</verify>
+                        <keystoreConfig>
+                            <delete>true</delete>
+                            <gen>true</gen>
+                        </keystoreConfig>
+                    </sign>
+                    <outputJarVersions>false</outputJarVersions>
+                    <pack200>false</pack200>
+                    <gzip>false</gzip>
+                    <verbose>false</verbose>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+</project>
