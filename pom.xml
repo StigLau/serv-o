@@ -26,16 +26,11 @@
     <modules>
         <module>serv-o-webstart-distribution</module>
         <module>serv-o-web</module>
+        <module>ultimate-roundtrip</module>
+        <module>jetty-pkg</module>
     </modules>
     <dependencyManagement>
         <dependencies>
-            <!--
-            <dependency>
-                <groupId>no.lau.vdvil</groupId>
-                <artifactId>binding-layer</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-			-->
 			<dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
