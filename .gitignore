@@ -5,6 +5,7 @@
 *.iml
 *.ipr
 *.iws
+*.svn
 target
 out
 .DS_Store
