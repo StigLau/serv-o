@@ -1,12 +1,13 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>no.lau</groupId>
     <artifactId>serv-o-root</artifactId>
-    <version>0.1-SNAPSHOT</version>
+    <version>0.2-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>Serv-o-Root</name>
     <description>Client-side processing for webapps, done the hard way!</description>
-    
+
     <licenses>
         <license>
             <name>Apache 2</name>
@@ -26,30 +27,8 @@
     <modules>
         <module>serv-o-webstart-distribution</module>
         <module>serv-o-web</module>
-        <module>ultimate-roundtrip</module>
-        <module>jetty-pkg</module>
     </modules>
-    <dependencyManagement>
-        <dependencies>
-			<dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.8.2</version>
-            <scope>test</scope>
-        </dependency>
-		<dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>1.6.1</version>
-        </dependency>
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-simple</artifactId>
-            <version>1.6.1</version>
-        </dependency>
-        </dependencies>
-    </dependencyManagement>
-    
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
@@ -63,7 +42,7 @@
             </plugin>
         </plugins>
     </build>
-    
+
     <scm>
         <connection>scm:git:ssh://github.com/StigLau/serv-o.git</connection>
         <developerConnection>scm:git:ssh://git@github.com/StigLau/serv-o.git</developerConnection>
