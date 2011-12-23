@@ -11,7 +11,7 @@
     </information>
 
     <security>
-        <all-permissions/>
+        <all-permissions/> <!-- For allowing setting up a local listening http port -->
     </security>
 
 
